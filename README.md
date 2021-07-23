@@ -14,7 +14,7 @@ In this course, you'll learn how to interact with MongoDB, use the built-in Mong
 	Prerequisites
 
 ## Module 1: MongoDB introduction (60 minutes)
-•	What is MongoDB
+* What is MongoDB
 •	Document model vs relational model
 •	Advantages of MongoDB 
 •	JSON document structure
