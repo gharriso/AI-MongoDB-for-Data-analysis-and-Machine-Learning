@@ -1,8 +1,22 @@
+use sample_mflix;
+
+db.movies.aggregate([
+  { $match:{"directors":{ $eq:"Stanley Kubrick" },
+            "genres":{$eq:"War"}}
+  }
+,
+  { $group:{ _id:{ "genres":"$genres"  }, 
+             "count":{$sum:1} }
+  },
+  { $sort:{  "count":-1 }},
+]);
+
 use sample_analytics
 
 db.transactions.findOne();
 db.customers.findOne();
 db.accounts.findOne();
+
 
 db.transactions.aggregate([
   { $group:{  _id:{ "account_id":"$account_id"  }, 
